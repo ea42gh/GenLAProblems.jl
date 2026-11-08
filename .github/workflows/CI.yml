@@ -33,7 +33,7 @@ jobs:
           - x64
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-      - uses: julia-actions/setup-julia@fa02766e078afaaf09b14210362cee14137e6a32 # v3
+      - uses: julia-actions/setup-julia@da908477b5db94c10ffce8cfea9f2b3b9d5db687 # v3
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
@@ -49,7 +49,7 @@ jobs:
       statuses: write
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-      - uses: julia-actions/setup-julia@fa02766e078afaaf09b14210362cee14137e6a32 # v3
+      - uses: julia-actions/setup-julia@da908477b5db94c10ffce8cfea9f2b3b9d5db687 # v3
         with:
           version: '1.10'
       - uses: julia-actions/cache@a45e8fa8be21c18a06b7177052533149e61e9b38 # v3
@@ -98,7 +98,7 @@ jobs:
             "matrixlayout[render] @ git+https://github.com/ea42gh/matrixlayout.git" \
             "LAFigureSpecs @ git+https://github.com/ea42gh/LAFigureSpecs.git"
           "${{ steps.setup-python.outputs.python-path }}" -c "import matrixlayout, LAFigureSpecs; print(matrixlayout.__name__, LAFigureSpecs.__name__)"
-      - uses: julia-actions/setup-julia@fa02766e078afaaf09b14210362cee14137e6a32 # v3
+      - uses: julia-actions/setup-julia@da908477b5db94c10ffce8cfea9f2b3b9d5db687 # v3
         with:
           version: '1.10'
           arch: x64
